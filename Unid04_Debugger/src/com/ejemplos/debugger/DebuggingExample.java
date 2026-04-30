@@ -9,7 +9,7 @@ public class DebuggingExample {
         names.add("Bob");
         names.add("Charlie");
         names.add("Diana");
-        names.add("Juan");
+        names.add("Mario"); // MCM: Modifico nombre Juan por Mario
 
         DebuggingExample example = new DebuggingExample();
         example.printNames(names);
@@ -22,6 +22,7 @@ public class DebuggingExample {
 
         example.addName(names, "Edward");
         example.removeName(names, "Alice");
+        example.removeName(names, "Diana"); // MCM: Añado metodo removeName
         example.printNames(names);
     }
 
@@ -38,7 +39,7 @@ public class DebuggingExample {
 
     public boolean removeName(List<String> names, String nameToRemove) {
         boolean result = names.remove(nameToRemove); // Set a breakpoint and use Step Return here
-        System.out.println("Removed name: " + nameToRemove);
+        System.out.println("Borrar nombre: " + nameToRemove); // MCM: poner el texto en vez de removed name a borrar nombre.
         return result;
     }
     public int calculateTotalLetters(List<String> names) {
